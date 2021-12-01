@@ -1,0 +1,5 @@
+use: []
+run:
+  - curl https://github.com/phppgadmin/phppgadmin/releases/download/REL_7-13-0/phpPgAdmin-7.13.0.zip --output phpPgAdmin-7.13.0.zip
+  - unzip phpPgAdmin-7.13.0.zip -d ./public
+deploy: [./public]
