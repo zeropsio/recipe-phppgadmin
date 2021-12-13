@@ -4,7 +4,7 @@ run:
   - curl -L -o phpPgAdmin-7.13.0.zip https://github.com/phppgadmin/phppgadmin/releases/download/REL_7-13-0/phpPgAdmin-7.13.0.zip
   - unzip phpPgAdmin-7.13.0.zip phpPgAdmin-7.13.0/* -d ./public
   - cd public; mv phpPgAdmin-7.13.0/* .; rm -r phpPgAdmin-7.13.0
-  - sed -i "s/\['host'\] = '';/\['host'\] = $DATABASE_HOSTNAME;/g" ./public/conf/config.inc.php
+  - sed -i "s/\['host'\] = '';/\['host'\] = '$DATABASE_HOSTNAME';/g" ./public/conf/config.inc.php
 deploy: [./public]
 # phppgadmin:
 #  build:
