@@ -1,21 +1,12 @@
 use: []
 run:
-  - echo $DATABASE_HOSTNAME
+  # Downloading of the phpPgAdmin-7.13.0.zip.
   - curl -L -o phpPgAdmin-7.13.0.zip https://github.com/phppgadmin/phppgadmin/releases/download/REL_7-13-0/phpPgAdmin-7.13.0.zip
+  # The content is unzipped into the local "public" directory.
   - unzip phpPgAdmin-7.13.0.zip phpPgAdmin-7.13.0/* -d ./public
+  # Moving the content of the inner subdirectory "phpPgAdmin-7.13.0" into the "public" directory.
   - cd public; mv phpPgAdmin-7.13.0/* .; rm -r phpPgAdmin-7.13.0
+  # Updating the hostname to which phpPgAdmin is allowed to connect using the env. variable "DATABASE_HOSTNAME".
+  # The environment variable "DATABASE_HOSTNAME" is preset by the Zerops import statements.
   - sed -i "s/\['host'\] = '';/\['host'\] = '$DATABASE_HOSTNAME';/g" ./public/conf/config.inc.php
 deploy: [./public]
-# phppgadmin:
-#  build:
-#    base: [php-apache@7.4]
-#    build:
-#      - echo $DATABASE_HOSTNAME
-#      - curl -L -o phpPgAdmin-7.13.0.zip https://github.com/phppgadmin/phppgadmin/releases/download/REL_7-13-0/phpPgAdmin-7.13.0.zip
-#      - unzip phpPgAdmin-7.13.0.zip phpPgAdmin-7.13.0/* -d ./public
-#      - cd public; mv phpPgAdmin-7.13.0/* .; rm -r phpPgAdmin-7.13.0
-#      - sed -i "s/\['host'\] = '';/\['host'\] = $DATABASE_HOSTNAME;/g" ./public/conf/config.inc.php
-#    deploy: [./public]
-#  run:
-#    init:
-#      - echo "The application is being started ..."
