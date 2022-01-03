@@ -1,2 +1,5 @@
 # VS Code settings
 .vscode/
+
+# zcli config
+zcli.config.yml
