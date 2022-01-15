@@ -1,3 +1,4 @@
+# Service hostname to which the application will be deployed.
 phppgadmin:
   build:
     build:
