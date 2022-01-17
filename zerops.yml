@@ -12,6 +12,6 @@ phppgadmin:
       # The environment variable "DATABASE_HOSTNAME" is preset by the Zerops import statements.
       - sed -i "s/\['host'\] = '';/\['host'\] = '$DATABASE_HOSTNAME';/g" ./public/conf/config.inc.php
     deploy: [./public]
-  run:
-    # Folder name used as the root of the publicly accessible web server content.
-    documentRoot: public
+#  run:
+#    # Folder name used as the root of the publicly accessible web server content.
+#    documentRoot: public
