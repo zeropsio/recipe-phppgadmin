@@ -13,7 +13,7 @@ services:
   # Service will be accessible through zcli VPN under: http://phppgadmin
 - hostname: phppgadmin
   # Type and version of a used service.
-  type: php-apache@7.4
+  type: php-apache@7.4+2.4
   # Whether the service will be run on one or multiple containers.
   # Since this is a utility service, using only one container is fine.
   mode: NON_HA
@@ -22,10 +22,9 @@ services:
   # Setting of the "DATABASE_HOSTNAME" environment variable.
   # It specifies the chosen hostname for the Zerops PostgreSQL service that should be managed.
   envVariables:
-  - key: DATABASE_HOSTNAME
     # Here, the Zerops PostgreSQL service's chosen hostname is "postgresql".
     # Change it if you need to use a different one.
-    content: postgresql
+    DATABASE_HOSTNAME: postgresql
 ```
 
 Copy & paste the import snippet above into the dialog of **Import service** functionality.
