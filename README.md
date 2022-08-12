@@ -16,7 +16,8 @@ services:
   type: php-apache@7.4+2.4
   # Whether the service will be run on one or multiple containers.
   # Since this is a utility service, using only one container is fine.
-  mode: NON_HA
+  minContainers: 1
+  maxContainers: 1
   # Repository that contains phpPgAdmin code with build and deploy instructions.
   buildFromGit: https://github.com/zeropsio/recipe-phppgadmin@main
   # Setting of the "DATABASE_HOSTNAME" environment variable.
