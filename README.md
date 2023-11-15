@@ -32,11 +32,9 @@ Copy & paste the import snippet above into the dialog of **Import service** func
 
 ![Import](./images/Zerops-Import-Services-Dialog.png "Import Service Dialog")
 
-See the [Zerops documentation](https://docs.zerops.io/documentation/export-import/project-service-export-import.html) to understand how to use it.
-
 ## Using the recipe
 
-1. Use the Zerops [importing](/documentation/export-import/project-service-export-import.html#how-to-export-import-a-project) functionality to import [recipe service](#zerops-import-syntax) into your already existing Zerops project.
+1. Use the Zerops [importing](https://docs.zerops.io/documentation/export-import/project-service-export-import.html#how-to-export-import-a-project) functionality to import [recipe service](#zerops-import-syntax) into your already existing Zerops project.
 
 2. Wait till the moment when a service will be created and running.
 
@@ -57,7 +55,7 @@ See the [Zerops documentation](https://docs.zerops.io/documentation/export-impor
 
 ![phpPgAdmin](./images/Login-Page-phpPgAdmin.png "Login page of phpPgAdmin")
 
-7. As the **Username** enter the [chosen hostname](https://docs.zerops.io/documentation/services/databases/postgresql.html#hostname-and-ports) of the Zerops PostgreSQL service you want to access. The ==**postgresql**== value was mentioned above and shown in the import syntax.
+7. As the **Username** enter the [chosen hostname](https://docs.zerops.io/documentation/services/databases/postgresql.html#hostname-and-ports) of the Zerops PostgreSQL service you want to access. The **postgresql** value was mentioned above and shown in the import syntax.
 
 8. The user password can be taken from the **Database access details** section of the Zerops PostgreSQL service.
 
